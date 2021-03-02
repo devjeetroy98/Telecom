@@ -1,0 +1,218 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-custom py-lg-4">
+    <a class="navbar-brand" href="#">Fast Conn</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Plans<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Buy SIM<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Support<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Recharge<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Pay Bill<span class="sr-only"></span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <button class="btn btn-outline-info mr-sm-2 signin" type="submit">SIGN IN</button>
+        </li>
+      </ul>            
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <div class="main">
+    <div class="leftpanel">
+        <div class="top-bar1">
+            <div class="gen-bill">
+                <div class="top-section">
+                    <h3>Active Subscibers 1,02,394</h3>
+                </div>
+                <div class="bottom-section">
+                    <button (click)="choosePanel1()">Generate Balance</button>
+                </div>
+            </div>
+            <div class="new-conn">
+                <div class="top-section">
+                    <h3>Connection Request 21,342</h3>
+                </div>
+                <div class="bottom-section">
+                    <button (click)="choosePanel2()">Approve / Reject Request</button>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar2">
+            <div class="new-plans">
+                <div class="top-section">
+                    <h3>Number of Plans <br>  231</h3>
+                </div>
+                <div class="bottom-section">
+                    <button (click)="choosePanel3()">Edit Plans</button>
+                </div>
+            </div>
+            <div class="reactivation">
+                <div class="top-section">
+                    <h3>List of defaulters <br> 542</h3>
+                </div>
+                <div class="bottom-section">
+                    <button (click)="choosePanel4()">See defaulters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-area" [ngSwitch]="section">
+        <div *ngSwitchCase = "'1'">
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="conntype">Enter connection type</label>
+                    <select class="form-control" id="conntype">
+                        <option value="prepaid" default>Prepaid</option>
+                        <option value="postpaid">Postpaid</option>
+                        <option value="dth">DTH</option>
+                        <option value="broadband">Broadband</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber1">Enter Fast Conn ID</label>
+                    <input type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" placeholder="Enter Fast Conn ID">
+                    <small id="numberHelp" class="form-text text-muted">We'll never share your ID with anyone else.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Generate Balance</button>
+            </form>
+        </div>
+        <div *ngSwitchCase = "'2'">
+            <form action="/search">
+                <div class="form-group">
+                    <label for="exampleInputNumber1">Enter Enrollment ID</label>
+                    <input type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" placeholder="Enter Enrollment ID">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <div class="indlist">
+                <p>John Doe</p>
+                <div class="but">
+                    <form action="/approve"><button type="submit" class="btn btn-success">Approve</button></form>
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Reject</button></form>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase = "'3'">
+            <form action="/search">
+                <div class="form-group">
+                    <label for="exampleInputNumber1">Enter Plan ID</label>
+                    <input type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" placeholder="Enter Plan ID">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <br>
+            <form action="/update-plan">
+                <div class="form-group">
+                    <label for="exampleInputNumber1">Calls</label>
+                    <input type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" placeholder="Call duration">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber2">Internet</label>
+                    <input type="text" class="form-control" id="exampleInputNumber2" aria-describedby="numberHelp" placeholder="Daily Internet Usage">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber3">SMS</label>
+                    <input type="text" class="form-control" id="exampleInputNumber3" aria-describedby="numberHelp" placeholder="Daily SMS limit">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber4">Validity</label>
+                    <input type="text" class="form-control" id="exampleInputNumber4" aria-describedby="numberHelp" placeholder="Validity">
+                </div>
+                <button type="submit" class="btn btn-primary">Save & Update</button>
+            </form>
+        </div>
+        <div *ngSwitchCase = "'4'">
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+            <div class="indlist">
+                <p>ID : 28493493833 </p>
+                <div class="but">
+                    <form action="/reject"><button type="submit" class="btn btn-danger">Cancel</button></form>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchDefault>
+            <h2 style="text-align: center; margin-top: 40px;">Work Area</h2>
+        </div>
+    </div>
+  </div>
+  <div class="footer-section">
+    <footer>
+        <div class="address">
+            <h2>Fast Conn</h2>
+            <p>123, Gandhi Sarani, Royal Tower, Mumbai- 400067</p>
+            <div class="social">
+                <a href="http://"><img src="../../assets/images/instagram.png" alt="Instagram" srcset="" class="smallicon"></a>
+                <a href="http://"><img src="../../assets/images/facebook.svg" alt="Facebook" srcset="" class="smallicon"></a>
+                <a href="http://"><img src="../../assets/images/linkedin.svg" alt="LinkedIn" srcset="" class="smallicon"></a>
+                <a href="http://"><img src="../../assets/images/twitter.svg" alt="Twitter" srcset="" class="smallicon"></a>
+            </div>
+        </div>
+        <pre>
+            Support
+            FAQ
+            Contact Us
+            My Account
+            Find A Store
+            Service Center
+            My Orders- SIM & Fast Conn Fiber
+            Check Plans 
+            Feedback
+        </pre>
+    </footer>
+</div>
