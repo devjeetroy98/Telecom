@@ -28,7 +28,7 @@ import { RechargeComponent } from './Landline/recharge/recharge.component';
 import { PrepaidplansComponent } from './Landline/prepaidplans/prepaidplans.component';
 import { PaybillsComponent } from './Landline/paybills/paybills.component';
 import { SuccessfulComponent } from './successful/successful.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -63,7 +63,8 @@ import { SuccessfulComponent } from './successful/successful.component';
      MatToolbarModule,
      MatIconModule,
      MatExpansionModule,
-     MatTabsModule
+     MatTabsModule,
+     MatCardModule
 
   ],
   providers: [],

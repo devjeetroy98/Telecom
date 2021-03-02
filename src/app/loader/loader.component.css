@@ -262,6 +262,7 @@ pre{
         background: linear-gradient(to right, #1e3c72, #2a5298);
         margin: 10px;
         height: 450px;
+        max-width: 500px;
         padding-left: 20px;
         padding-right: 20px;
         color: white;
@@ -276,11 +277,11 @@ pre{
         padding-bottom: 10px;
     }
     .sideright{
-        width: 100%;
-        margin: 40px;
+        max-width: 500px;
+        margin: 0px;
     }
     .sideright form{
-        width: 350px;
+        max-width: 350px;
     }
     .footer-section{
         height: 500px;

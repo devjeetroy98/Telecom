@@ -1,38 +1,30 @@
-<html>
-
-<head>
-  <title>Form Validation</title>
-</head>
-<body>
-	<div class="main">
-		<h1>Prepaid SIM Enrollment form</h1>
-		<div class="form1">
-		<!--	Registration Form<br>!-->
-			<form name="simple" onsubmit="return empty();" method="post" action="Ass1.php">
-				<input type="text" id="req1" placeholder="Full name"><br><br>		
-				<!--<input type="text" id="req2" placeholder="Lastname"><br><br>-->
-				<input type="text" id="req3" placeholder="Email address"><br><br>
-				<!--<input type="text" id="req4" placeholder="Contact number" name="phone"><br><br>-->
-				<input type="password" id="req5" placeholder="Password"><br>
-								D.O.B<br><input type="date" name="bday"><br><br>
-	<!--Gender:
-	<br>
-	<input type="radio" name="gender">Male <input type="radio" name="gender">Female-->
-				Gender:
-				<select id="selection">
-					<option>Gender</option>
-					<option>Male</option>
-					<option>Female</option>
+<div class="container">
+	<h1>Prepaid SIM Enrollemnt Form</h1>
+		<form action="/pay-bill">
+			<div class="form-group">
+				<input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" autofocus>
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-control" name="email" id="email" placeholder="Email Address" >
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="password" id="password" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="date">Date of Birth</label>
+				<input type="date" class="form-control" name="date" id="date" placeholder="Date of Birth">
+			</div>
+			<div class="form-group">
+				<select class="form-control" id="exampleFormControlSelect2">
+				  <option value="default" default>Choose Gender</option>
+				  <option value="M">Male</option>
+				  <option value="F">Female</option>
+				  <option value="X">Prefer no to Say</option>
 				</select>
-				<br><br>
-                <input type="text" id="req4" placeholder="Address"><br><br>
-				<input type="submit" value="Submit" onclick="emailValidate(document.getElementById('req3'),'Invalid Email id.'),/*isNumeric(document.getElementById('req4'),'Enter digits in contact no.'),*/Selection(document.getElementById('selection'),'Please select gender')">
-
-
-			</form>
-		</div>	
-	</div>
-
-
-</body>
-</html>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" name="Address" id="Address" placeholder="Your address">
+			</div>
+			<input type="submit" value="Submit" class="btn btn-info">
+		</form>
+</div>
