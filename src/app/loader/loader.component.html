@@ -45,6 +45,8 @@
           </ul>            
         </div>
       </nav>   --> 
+
+  
     
        <div class="main">
         <div class="cara">
@@ -101,7 +103,8 @@
                         <input type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp" placeholder="Enter Fast Conn ID">
                         <small id="numberHelp" class="form-text text-muted">We'll never share your ID with anyone else.</small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Recharge</button>
+                    <a  routerLink="/recharge-sucessful">
+                    <button type="submit" class="btn btn-primary">Recharge</button></a>
                 </form>
             </div>
         </div>
@@ -116,7 +119,7 @@
                 <div class="card-body">
                   <h5 class="card-title">New SIM Prepaid</h5>
                   <p class="card-text">Buy our 4G SIMs and join the fastest 4G network till date.</p>
-                  <a href="#" class="btn btn-primary">Buy SIM</a>
+                  <a  routerLink="/newconnection/newprepaid" class="btn btn-primary">Buy SIM</a>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
@@ -124,7 +127,7 @@
                 <div class="card-body">
                   <h5 class="card-title">New SIM Postpaid</h5>
                   <p class="card-text">Buy our postpaid SIM, and get cashback at every recharge.</p>
-                  <a href="#" class="btn btn-primary">Buy SIM</a>
+                  <a routerLink="/newconnection/newpostpaid" class="btn btn-primary">Buy SIM</a>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
@@ -193,7 +196,8 @@
                         <option value="500+">More then 500 SMS per day</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Search Plans</button>
+                <a routerLink="/prepaid/plans">
+                <button type="submit" class="btn btn-primary">Search Plans</button> </a>
             </form>
         </div>
     </div>
@@ -223,6 +227,7 @@
             </pre>
         </footer>
     </div> -->
-    <app-footer></app-footer>
+
+
 </ng-template>
 

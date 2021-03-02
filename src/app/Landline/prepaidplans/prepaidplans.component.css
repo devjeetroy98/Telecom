@@ -10,13 +10,11 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .plan123 .plan {
   margin: 0;
   width: 25%;
-  position: relativab;
+  position: relative;
   float: left;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -137,27 +135,4 @@
   .plan123 .plan {
     width: 100%;
   }
-}
-
-
-
-.navbar-brand{
-  font-size: 30px;
-  font-weight: bolder;
-}
-.bg-custom{
-  background-color: #041E42 !important;
-}
-.navbar-brand{
-  font-size: 30px;
-  font-weight: bolder;
-}
-li a{
-  font-size: 20px;
-}
-.signin{
-  background-color: white;
-}
-.signin:hover{
-  color: navy;
 }

@@ -20,6 +20,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SupportComponent } from './support/support.component';
+import { NewpostpaidComponent } from './Landline/newpostpaid/newpostpaid.component';
+import { NewprepaidComponent } from './Landline/newprepaid/newprepaid.component';
+import { PaybillComponent } from './Landline/paybill/paybill.component';
+import { PostpaidplansComponent } from './Landline/postpaidplans/postpaidplans.component';
+import { RechargeComponent } from './Landline/recharge/recharge.component';
+import { PrepaidplansComponent } from './Landline/prepaidplans/prepaidplans.component';
+import { PaybillsComponent } from './Landline/paybills/paybills.component';
+import { SuccessfulComponent } from './successful/successful.component';
+
 
 
 @NgModule({
@@ -34,6 +43,14 @@ import { SupportComponent } from './support/support.component';
     AdminDashboardComponent,
     UserDashboardComponent,
     SupportComponent,
+    NewpostpaidComponent,
+    NewprepaidComponent,
+    PaybillComponent,
+    PostpaidplansComponent,
+    RechargeComponent,
+    PrepaidplansComponent,
+    PaybillsComponent,
+    SuccessfulComponent,
   
 
   ],
