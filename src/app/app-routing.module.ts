@@ -12,6 +12,7 @@ import { NewpostpaidComponent } from './newpostpaid/newpostpaid.component';
 import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
+{ 'path':'', 'redirectTo':'/home', 'pathMatch':'full' },
  { path: 'login', component: LoginComponent , pathMatch: 'full' },
  { path: 'register', component: RegisterComponent , pathMatch: 'full' },
  { path: 'home', component:LoaderComponent , pathMatch:'full' },
